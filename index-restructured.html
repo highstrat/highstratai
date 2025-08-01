@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIGHSTRAT AI Dashboard</title>
+  <link rel="stylesheet" href="css/styles-restructured.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Supabase JS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>HIGHSTRAT AI</h1>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#" onclick="showPhase('dashboard')">Dashboard</a></li>
+        <li><a href="#" onclick="showPhase('assess')">Assess & Strategize</a></li>
+        <li><a href="#" onclick="showPhase('design')">Design & Modernize</a></li>
+        <li><a href="#" onclick="showPhase('source')">Source & Match</a></li>
+        <li><a href="#" onclick="showPhase('implement')">Implement & Deploy</a></li>
+        <li><a href="#" onclick="showPhase('contract')">Contract & Procure</a></li>
+        <li><a href="#" onclick="showPhase('optimize')">Optimize & Evolve</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="phase-navigation">
+        <button onclick="showPhase('assess')">Assess</button>
+        <button onclick="showPhase('design')">Design</button>
+        <button onclick="showPhase('source')">Source</button>
+        <button onclick="showPhase('implement')">Implement</button>
+        <button onclick="showPhase('contract')">Contract</button>
+        <button onclick="showPhase('optimize')">Optimize</button>
+      </div>
+
+      <div id="dashboard" class="phase-container active">
+        <h2>Dashboard</h2>
+        <div class="dashboard-widgets">
+          <div class="widget" id="projectsWidget">
+            <h3>Active Projects</h3>
+            <div class="widget-content">
+              <p class="loading">Loading data...</p>
+            </div>
+          </div>
+          <div class="widget" id="assessmentsWidget">
+            <h3>Recent Assessments</h3>
+            <div class="widget-content">
+              <p class="loading">Loading data...</p>
+            </div>
+          </div>
+          <div class="widget" id="metricsWidget">
+            <h3>Key Metrics</h3>
+            <div class="widget-content">
+              <p class="loading">Loading data...</p>
+            </div>
+          </div>
+          <div class="widget" id="activitiesWidget">
+            <h3>Recent Activities</h3>
+            <div class="widget-content">
+              <p class="loading">Loading data...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="assess" class="phase-container">
+        <h2>Assess & Strategize</h2>
+        <div class="phase-tools">
+          <div class="tool-card">
+            <h3>Current State Assessment</h3>
+            <p>Evaluate your organization's current technology landscape</p>
+            <button class="tool-button">Start Assessment</button>
+          </div>
+          <div class="tool-card">
+            <h3>Strategic Roadmap</h3>
+            <p>Develop a strategic roadmap for digital transformation</p>
+            <button class="tool-button">Create Roadmap</button>
+          </div>
+          <div class="tool-card">
+            <h3>Gap Analysis</h3>
+            <p>Identify gaps between current state and future vision</p>
+            <button class="tool-button">Analyze Gaps</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="design" class="phase-container">
+        <h2>Design & Modernize</h2>
+        <div class="phase-tools">
+          <div class="tool-card">
+            <h3>Architecture Design</h3>
+            <p>Design modern, scalable solution architecture</p>
+            <button class="tool-button">Start Design</button>
+          </div>
+          <div class="tool-card">
+            <h3>Technology Selection</h3>
+            <p>Select appropriate technologies for your solution</p>
+            <button class="tool-button">Select Technologies</button>
+          </div>
+          <div class="tool-card">
+            <h3>Legacy Modernization</h3>
+            <p>Plan for modernizing legacy systems</p>
+            <button class="tool-button">Modernize</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="source" class="phase-container">
+        <h2>Source & Match</h2>
+        <div class="phase-tools">
+          <div class="tool-card">
+            <h3>Vendor Search</h3>
+            <p>Find suitable vendors for your project needs</p>
+            <button class="tool-button">Search Vendors</button>
+          </div>
+          <div class="tool-card">
+            <h3>Solution Matching</h3>
+            <p>Match requirements with available solutions</p>
+            <button class="tool-button">Match Solutions</button>
+          </div>
+          <div class="tool-card">
+            <h3>Partner Network</h3>
+            <p>Access our network of implementation partners</p>
+            <button class="tool-button">Find Partners</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="implement" class="phase-container">
+        <h2>Implement & Deploy</h2>
+        <div class="phase-tools">
+          <div class="tool-card">
+            <h3>Project Planning</h3>
+            <p>Create detailed implementation plans</p>
+            <button class="tool-button">Plan Project</button>
+          </div>
+          <div class="tool-card">
+            <h3>Resource Allocation</h3>
+            <p>Allocate resources efficiently for implementation</p>
+            <button class="tool-button">Allocate Resources</button>
+          </div>
+          <div class="tool-card">
+            <h3>Deployment Strategy</h3>
+            <p>Develop a robust deployment strategy</p>
+            <button class="tool-button">Create Strategy</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="contract" class="phase-container">
+        <h2>Contract & Procure</h2>
+        <div class="phase-tools">
+          <div class="tool-card">
+            <h3>Contract Templates</h3>
+            <p>Access standard contract templates</p>
+            <button class="tool-button">View Templates</button>
+          </div>
+          <div class="tool-card">
+            <h3>Negotiation Support</h3>
+            <p>Get support for vendor negotiations</p>
+            <button class="tool-button">Request Support</button>
+          </div>
+          <div class="tool-card">
+            <h3>Procurement Tracking</h3>
+            <p>Track procurement activities and milestones</p>
+            <button class="tool-button">Track Procurement</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="optimize" class="phase-container">
+        <h2>Optimize & Evolve</h2>
+        <div class="phase-tools">
+          <div class="tool-card">
+            <h3>Performance Monitoring</h3>
+            <p>Monitor solution performance metrics</p>
+            <button class="tool-button">View Metrics</button>
+          </div>
+          <div class="tool-card">
+            <h3>Continuous Improvement</h3>
+            <p>Identify opportunities for improvement</p>
+            <button class="tool-button">Improve</button>
+          </div>
+          <div class="tool-card">
+            <h3>Innovation Roadmap</h3>
+            <p>Plan for future innovation and evolution</p>
+            <button class="tool-button">Create Roadmap</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/supabase-config.js"></script>
+  <script src="js/main-restructured.js"></script>
+</body>
+</html>

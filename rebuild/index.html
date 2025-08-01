@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIGHSTRAT AI Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>HIGHSTRAT AI</h1>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#" onclick="showPhase('dashboard')">Dashboard</a></li>
+        <li><a href="#" onclick="showPhase('assess')">Assess & Strategize</a></li>
+        <li><a href="#" onclick="showPhase('design')">Design & Modernize</a></li>
+        <li><a href="#" onclick="showPhase('source')">Source & Match</a></li>
+        <li><a href="#" onclick="showPhase('implement')">Implement & Deploy</a></li>
+        <li><a href="#" onclick="showPhase('contract')">Contract & Procure</a></li>
+        <li><a href="#" onclick="showPhase('optimize')">Optimize & Evolve</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="phase-navigation">
+        <button onclick="showPhase('assess')">Assess</button>
+        <button onclick="showPhase('design')">Design</button>
+        <button onclick="showPhase('source')">Source</button>
+        <button onclick="showPhase('implement')">Implement</button>
+        <button onclick="showPhase('contract')">Contract</button>
+        <button onclick="showPhase('optimize')">Optimize</button>
+      </div>
+
+      <div id="dashboard" class="phase-container active">
+        <h2>Dashboard</h2>
+      </div>
+
+      <div id="assess" class="phase-container">
+        <h2>Assess & Strategize</h2>
+      </div>
+
+      <div id="design" class="phase-container">
+        <h2>Design & Modernize</h2>
+      </div>
+
+      <div id="source" class="phase-container">
+        <h2>Source & Match</h2>
+      </div>
+
+      <div id="implement" class="phase-container">
+        <h2>Implement & Deploy</h2>
+      </div>
+
+      <div id="contract" class="phase-container">
+        <h2>Contract & Procure</h2>
+      </div>
+
+      <div id="optimize" class="phase-container">
+        <h2>Optimize & Evolve</h2>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

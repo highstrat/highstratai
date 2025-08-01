@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIGHSTRAT AI Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <h1><i class="fas fa-rocket"></i> HIGHSTRAT AI</h1>
+    <p class="tagline">Enterprise Strategy & AI Solutions</p>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="user-profile">
+        <div class="avatar">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="user-info">
+          <p class="welcome">Welcome</p>
+          <p class="user-name">User</p>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#" class="active" data-phase="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="#" data-phase="assess"><i class="fas fa-search"></i> Assess & Strategize</a></li>
+        <li><a href="#" data-phase="design"><i class="fas fa-pencil-ruler"></i> Design & Modernize</a></li>
+        <li><a href="#" data-phase="source"><i class="fas fa-database"></i> Source & Match</a></li>
+        <li><a href="#" data-phase="implement"><i class="fas fa-cogs"></i> Implement & Deploy</a></li>
+        <li><a href="#" data-phase="contract"><i class="fas fa-file-signature"></i> Contract & Procure</a></li>
+        <li><a href="#" data-phase="optimize"><i class="fas fa-chart-line"></i> Optimize & Evolve</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#" class="settings-link"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#" class="help-link"><i class="fas fa-question-circle"></i> Help</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb-nav">
+        <span class="breadcrumb-item active" id="current-phase">Dashboard</span>
+        <div class="phase-indicator">
+          <span class="phase-step">Step 1 of 7</span>
+        </div>
+      </div>
+      
+      <div class="phase-navigation">
+        <button data-phase="assess"><i class="fas fa-search"></i> Assess</button>
+        <button data-phase="design"><i class="fas fa-pencil-ruler"></i> Design</button>
+        <button data-phase="source"><i class="fas fa-database"></i> Source</button>
+        <button data-phase="implement"><i class="fas fa-cogs"></i> Implement</button>
+        <button data-phase="contract"><i class="fas fa-file-signature"></i> Contract</button>
+        <button data-phase="optimize"><i class="fas fa-chart-line"></i> Optimize</button>
+      </div>
+
+      <div id="dashboard" class="phase-container active">
+        <h2>Dashboard</h2>
+        <div class="dashboard-cards">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-tasks"></i></div>
+            <div class="card-content">
+              <h3>Active Projects</h3>
+              <p class="card-value">3</p>
+              <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 15%</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+            <div class="card-content">
+              <h3>Tasks Completed</h3>
+              <p class="card-value">24</p>
+              <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 8%</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-clock"></i></div>
+            <div class="card-content">
+              <h3>Hours Saved</h3>
+              <p class="card-value">128</p>
+              <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 25%</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+            <div class="card-content">
+              <h3>Cost Savings</h3>
+              <p class="card-value">$15K</p>
+              <p class="card-trend positive"><i class="fas fa-arrow-up"></i> 12%</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="recent-activity">
+          <h3>Recent Activity</h3>
+          <div class="activity-timeline">
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fas fa-check-circle"></i></div>
+              <div class="activity-content">
+                <p class="activity-title">Project Phoenix Assessment Completed</p>
+                <p class="activity-time">Today at 11:30 AM</p>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fas fa-file-alt"></i></div>
+              <div class="activity-content">
+                <p class="activity-title">New Contract Added</p>
+                <p class="activity-time">Yesterday at 3:15 PM</p>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fas fa-users"></i></div>
+              <div class="activity-content">
+                <p class="activity-title">Team Meeting Scheduled</p>
+                <p class="activity-time">Apr 23, 2025 at 10:00 AM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="assess" class="phase-container">
+        <h2>Assess & Strategize</h2>
+        <div class="assessment-tools">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-clipboard-list"></i></div>
+            <h3>Capability Assessment</h3>
+            <p>Evaluate your organization's current capabilities.</p>
+            <button class="tool-button">Start Assessment</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-sitemap"></i></div>
+            <h3>Gap Analysis</h3>
+            <p>Identify gaps between current and desired state.</p>
+            <button class="tool-button">Run Analysis</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-route"></i></div>
+            <h3>Roadmap Builder</h3>
+            <p>Create a strategic technology roadmap.</p>
+            <button class="tool-button">Build Roadmap</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="design" class="phase-container">
+        <h2>Design & Modernize</h2>
+        <div class="design-tools">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>Architecture Design</h3>
+            <p>Design modern, scalable architectures.</p>
+            <button class="tool-button">Start Design</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud Migration</h3>
+            <p>Plan your journey to the cloud.</p>
+            <button class="tool-button">Migration Wizard</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-robot"></i></div>
+            <h3>AI Integration</h3>
+            <p>Implement AI solutions in your business.</p>
+            <button class="tool-button">Explore AI</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="source" class="phase-container">
+        <h2>Source & Match</h2>
+        <div class="source-tools">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-search-dollar"></i></div>
+            <h3>Vendor Search</h3>
+            <p>Find the right vendors for your needs.</p>
+            <button class="tool-button">Search Vendors</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Partner Matching</h3>
+            <p>Match with strategic implementation partners.</p>
+            <button class="tool-button">Find Partners</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-file-contract"></i></div>
+            <h3>RFP Generator</h3>
+            <p>Generate RFPs based on your requirements.</p>
+            <button class="tool-button">Create RFP</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="implement" class="phase-container">
+        <h2>Implement & Deploy</h2>
+        <div class="implement-tools">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-tasks"></i></div>
+            <h3>Project Management</h3>
+            <p>Manage implementation projects.</p>
+            <button class="tool-button">Manage Projects</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-code"></i></div>
+            <h3>DevOps Integration</h3>
+            <p>Streamline your development and operations.</p>
+            <button class="tool-button">Setup DevOps</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-rocket"></i></div>
+            <h3>Deployment Automation</h3>
+            <p>Automate your deployment processes.</p>
+            <button class="tool-button">Automate</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="contract" class="phase-container">
+        <h2>Contract & Procure</h2>
+        <div class="contract-tools">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-file-signature"></i></div>
+            <h3>Contract Management</h3>
+            <p>Manage vendor contracts and agreements.</p>
+            <button class="tool-button">Manage Contracts</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-calculator"></i></div>
+            <h3>Cost Analysis</h3>
+            <p>Analyze and optimize procurement costs.</p>
+            <button class="tool-button">Run Analysis</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-shopping-cart"></i></div>
+            <h3>Procurement Portal</h3>
+            <p>Streamline your procurement process.</p>
+            <button class="tool-button">Access Portal</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="optimize" class="phase-container">
+        <h2>Optimize & Evolve</h2>
+        <div class="optimize-tools">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Performance Monitoring</h3>
+            <p>Monitor and analyze system performance.</p>
+            <button class="tool-button">View Metrics</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-cogs"></i></div>
+            <h3>Process Optimization</h3>
+            <p>Identify and eliminate bottlenecks.</p>
+            <button class="tool-button">Optimize</button>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Innovation Lab</h3>
+            <p>Explore emerging technologies and solutions.</p>
+            <button class="tool-button">Enter Lab</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

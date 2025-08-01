@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HIGHSTRAT AI Dashboard</title>
+<style>
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header {
+  background-color: #bf2e8a;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 250px;
+  padding: 1rem 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 0.5rem 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Phase container styles */
+.phase-container {
+  display: none; /* Initially hide all phase containers */
+  margin-bottom: 20px;
+}
+
+.phase-container.active {
+  display: block; /* Show the active phase container */
+}
+
+/* Styling for phase navigation */
+.phase-navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.phase-navigation button {
+  background-color: #bf2e8a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>HIGHSTRAT AI</h1>
+</div>
+
+<div class="container">
+  <div class="sidebar">
+    <ul>
+      <li><a href="#" onclick="showPhase('dashboard')">Dashboard</a></li>
+      <li><a href="#" onclick="showPhase('assess')">Assess & Strategize</a></li>
+      <li><a href="#" onclick="showPhase('design')">Design & Modernize</a></li>
+      <li><a href="#" onclick="showPhase('source')">Source & Match</a></li>
+      <li><a href="#" onclick="showPhase('implement')">Implement & Deploy</a></li>
+      <li><a href="#" onclick="showPhase('contract')">Contract & Procure</a></li>
+      <li><a href="#" onclick="showPhase('optimize')">Optimize & Evolve</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="phase-navigation">
+      <button onclick="showPhase('assess')">Assess</button>
+      <button onclick="showPhase('design')">Design</button>
+      <button onclick="showPhase('source')">Source</button>
+      <button onclick="showPhase('implement')">Implement</button>
+      <button onclick="showPhase('contract')">Contract</button>
+      <button onclick="showPhase('optimize')">Optimize</button>
+    </div>
+
+    <div id="dashboard" class="phase-container active">
+      <h2>Dashboard</h2>
+    </div>
+
+    <div id="assess" class="phase-container">
+      <h2>Assess & Strategize</h2>
+    </div>
+
+    <div id="design" class="phase-container">
+      <h2>Design & Modernize</h2>
+    </div>
+
+    <div id="source" class="phase-container">
+      <h2>Source & Match</h2>
+    </div>
+
+    <div id="implement" class="phase-container">
+      <h2>Implement & Deploy</h2>
+    </div>
+
+    <div id="contract" class="phase-container">
+      <h2>Contract & Procure</h2>
+    </div>
+
+    <div id="optimize" class="phase-container">
+      <h2>Optimize & Evolve</h2>
+    </div>
+  </div>
+</div>
+
+<script>
+function showPhase(phaseId) {
+  // Hide all phase containers
+  const containers = document.querySelectorAll('.phase-container');
+  containers.forEach(container => container.classList.remove('active'));
+
+  // Show the selected phase container
+  const activeContainer = document.getElementById(phaseId);
+  activeContainer.classList.add('active');
+}
+</script>
+
+</body>
+</html>
